@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* fonts */
+
+.material-icons {
+  font-family: "Material Icons";
+}
+
+.bold {
+  font-weight: bold;;
+}
+
+/* accessibility */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+*:focus,
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus,
+.focusable:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px currentColor inset;
+}
+
+@media (prefers-reduced-motion: reduce){
+  * {
+    animation: unset !important;
+    transition: none !important;
+  }
+}
+
+/* fix responsive bugs */
+
+*:not(head, script, table, tbody, tfoot, thead, tr, td, th),
+::after,
+::before,
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+html {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  font-size: 62.5%; /* 1em = 10px */
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+  flex: 1 0;
+  font-size: 27px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow: auto;
+}
+
+*[class*="adaptive-img"] {
+  position: relative;
+}
+
+*[class*="adaptive-img"] > span,
+*[class*="adaptive-img"] > span > img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+*[class*="adaptive-img"] > span {
+  margin: 0;
+  opacity: 1;
+  width: initial;
+  height: initial;
+  overflow: hidden;
+  background: none;
+}
+
+*[class*="adaptive-img"] > span > img {
+  width: 0;
+  height: 0;
+  margin: auto;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.adaptive-img--cover > span > img {
+  object-fit: cover;
+}
+
+.adaptive-img--contain > span > img {
+  object-fit: contain;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
