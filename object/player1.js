@@ -1,7 +1,7 @@
 
 
 class Player {
-    constructor(name, hp, mouv, atak, armor,r) {
+    constructor(name, hp, mouv, atak, armor, r) {
         this.setName(name);
         this.setHp(hp);
         this.setMouvMax(mouv);
@@ -28,7 +28,7 @@ class Player {
     }
     // ***********mouv**************
     setMouvMax(mouv, M = 0) {
-       this.mouv = mouv + M;
+        this.mouv = mouv + M;
     }
     getMouvMax() {
         return this.mouv;
@@ -53,10 +53,10 @@ class Player {
     getPosition() {
         return this.position
     }
-    setRevers(r){
-        this.revers=r
+    setRevers(r) {
+        this.revers = r
     };
-    getRevers(){
+    getRevers() {
         return this.setRevers
     };
 

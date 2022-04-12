@@ -1,5 +1,9 @@
-const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot, caseType) => {
+const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
+    const caseType = document.querySelectorAll('td');
+
     const initialPosi = j1.getPosition();
+
+
     const getNewPosition = (initialPosi) => {
         let newPosition;
         if (initialPosi === 9 || initialPosi === 19 || initialPosi === 29 || initialPosi === 39
@@ -15,55 +19,54 @@ const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot, caseT
     const newCase = caseType[newPosition];
     console.log(newCase)
     if (newCase.classList.length === 0 || newCase.classList.contains(telePortA.getName()) || newCase.classList.contains(telePortB.getName())
-    || newCase.classList.contains(sword.getName()) || newCase.classList.contains(chopped.getName()) || newCase.classList.contains(shield.getName()) ||
-    newCase.classList.contains(boot.getName())) {
+        || newCase.classList.contains(sword.getName()) || newCase.classList.contains(chopped.getName()) || newCase.classList.contains(shield.getName()) ||
+        newCase.classList.contains(boot.getName())) {
         const holdCase = caseType[initialPosi];
-        holdCase.classList.remove(j1.name)
+        holdCase.classList.remove(j1.getName())
 
-        newCase.classList.add(j1.name);
+        newCase.classList.add(j1.getName());
         j1.setPosition(newPosition);
     }
     if (j1.getPosition() === sword.getPosition() || j1.getPosition() === chopped.getPosition() || j1.getPosition() === boot.getPosition()
-    || j1.getPosition() === shield.getPosition()) {
-    newCase.classList.remove(sword.name);
-    newCase.classList.remove(chopped.name);
-    newCase.classList.remove(shield.name);
-    newCase.classList.remove(boot.name);
+        || j1.getPosition() === shield.getPosition()) {
+        newCase.classList.remove(sword.getName());
+        newCase.classList.remove(chopped.getName());
+        newCase.classList.remove(shield.getName());
+        newCase.classList.remove(boot.getName());
 
-}
+    }
 
-if (j1.getPosition() === telePortA.getPosition()) {
+    if (j1.getPosition() === telePortA.getPosition()) {
 
-    const holdCase = caseType[initialPosi];
-    const iniReverPosition = telePortB.getPosition();
-    const newReversPosition = iniReverPosition+ 1;
-    // const result=parseInt(newReversPosition )
+        const holdCase = caseType[initialPosi];
+        const iniReverPosition = telePortB.getPosition();
+        const newReversPosition = iniReverPosition + 1;
+        const teeeeeleeepooratiooon = caseType[newReversPosition];
 
-    const teeeeeleeepooratiooon = caseType[newReversPosition];
+        // if (checker(teeeeeleeepooratiooon, caseType) === true) {
+            holdCase.classList.remove(j1.getName());
+            teeeeeleeepooratiooon.classList.add(j1.getName());
+            j1.setPosition(newReversPosition);
 
-    holdCase.classList.remove(j1.name);
-    teeeeeleeepooratiooon.classList.add(j1.name);
+        };
+    // }
 
-    j1.setPosition(newReversPosition);
-}
+    if (j1.getPosition() === telePortB.getPosition()) {
 
-if (j1.getPosition() === telePortB.getPosition()) {
+        const holdCase = caseType[initialPosi];
+        const iniReverPosition = telePortA.getPosition();
+        const newReversPosition = iniReverPosition + 1;
+        const teeeeeleeepooratiooon = caseType[newReversPosition];
 
-    const holdCase = caseType[initialPosi];
-    const iniReverPosition = telePortA.getPosition();
-    const newReversPosition = iniReverPosition + 1;
-    // const result=parseInt(newReversPosition )
-
-    const teeeeeleeepooratiooon = caseType[newReversPosition];
-
-    holdCase.classList.remove(j1.name);
-    teeeeeleeepooratiooon.classList.add(j1.name);
-
-    j1.setPosition(newReversPosition);
-}
+        // if (checker(teeeeeleeepooratiooon, caseType) === true) {
+            holdCase.classList.remove(j1.getName());
+            teeeeeleeepooratiooon.classList.add(j1.getName());
+        // }
+        j1.setPosition(newReversPosition);
+    }
 
 
-    
+
 
 };
 export default mouvRight
