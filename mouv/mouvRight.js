@@ -17,7 +17,6 @@ const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     };
     const newPosition = getNewPosition(initialPosi);
     const newCase = caseType[newPosition];
-    console.log(newCase)
     if (newCase.classList.length === 0 || newCase.classList.contains(telePortA.getName()) || newCase.classList.contains(telePortB.getName())
         || newCase.classList.contains(sword.getName()) || newCase.classList.contains(chopped.getName()) || newCase.classList.contains(shield.getName()) ||
         newCase.classList.contains(boot.getName())) {

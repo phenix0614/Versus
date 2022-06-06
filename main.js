@@ -11,30 +11,46 @@ import TelePort from './object/teleporter.js';
 
 const main = () => {
 
-// ****************************************  VARIABLE ET FONCTION VRAC ******************************************************************************
+    // ****************************************  VARIABLE ET FONCTION VRAC ******************************************************************************
     const caseType = document.querySelectorAll('td');
 
     const ranDom = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
-    const checker = (Idnbr, maptelePortA) => {
-        const check = maptelePortA[Idnbr];
-        if (check.classList.length === 0) {
-            return true
-        } else {
-            return false
+    // const checker = (Idnbr, map) => {
+    //     const check = map[Idnbr];
+    //     if (check.classList.length === 0) {
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+
+    // }
+    // *********************************************************  timer   ***************************************************************
+    const timerWatch= document.querySelector('#chrono');
+    let timer= 60;
+    
+
+   const timelaps = () => {
+        timerWatch.innerText = timer;
+        timer --;
+        if (timer >= 0) {
+            setTimeout(timelaps, 1000);
+        }else{
+            clearTimeout();
         }
+    }  
+    timelaps();
 
-    }
 
-// ******************************************************** CREATION ELEMENT DE JEU *******************************************************************
+    // ******************************************************** CREATION ELEMENT DE JEU *******************************************************************
 
-//  CASE NOIR
+    //  CASE NOIR
 
     const genBlackCase = (nbrWall) => {
         const caseType = document.querySelectorAll('td');
 
-        for (let i = 0; i < nbrWall ; i++) {
+        for (let i = 0; i < nbrWall; i++) {
 
             const randomT = ranDom(0, 99);
             caseType[randomT].classList.add("desactive");
@@ -42,7 +58,7 @@ const main = () => {
         }
 
     }
-//  TELEPORTEUR
+    //  TELEPORTEUR
 
     const telePortA = new TelePort("telePortA", 0,);
     const telePortB = new TelePort("telePortB", 0);
@@ -53,7 +69,6 @@ const main = () => {
         const td = caseType[random];
 
         if (td.classList.length === 0) {
-
             td.classList.add(name.getName())
             name.setPosition(random);
 
@@ -61,19 +76,20 @@ const main = () => {
 
             genteleport(name);
         }
-    
+
     };
 
-    // JOUEUR
-        const playerOne = new Player("player1", 200, 20, 4, 5);
-        const playertwo = new Player("player2", 200, 3, 4, 5);
+    // ******************************************  JOUEUR + position *********************************************
 
-        const genPosition = (p1, p2) => {
-            const caseType = document.querySelectorAll('td');
+    const playerOne = new Player("player1", 200, 99, 4, 5);
+    const playertwo = new Player("player2", 200, 3, 4, 5);
 
-           const random = ranDom(0, 99);
-           const td = caseType[random];
-         if (td.classList.length === 0) {
+    const genPosition = (p1, p2) => {
+        const caseType = document.querySelectorAll('td');
+
+        const random = ranDom(0, 99);
+        const td = caseType[random];
+        if (td.classList.length === 0) {
             td.classList.add(p1.getName());
             p1.setPosition(random);
         } else {
@@ -81,9 +97,15 @@ const main = () => {
         }
 
     }
+    const mp= document.querySelector('#pm');        
+    mp.innerText= playerOne.getMouvMax();
 
-    // ARMES
-        const sword = new WeaPons("sword", 10, 50, 0, 0, 3);
+
+
+
+    //************************************* ARMES *******************************************************************************
+
+    const sword = new WeaPons("sword", 10, 50, 0, 0, 3);
     const chopped = new WeaPons("chopped", 15, 50, 2, 1, 3);
     const shield = new WeaPons("shield", 1, 2, 3, 4, 5);
     const boot = new WeaPons("boot", 1, 2, 3, 4, 5)
@@ -102,30 +124,55 @@ const main = () => {
         }
     };
 
+// *********************************************** mouvement player ****************************************************************
 
     document.body.addEventListener("keyup", (event) => {
         const key = event.key;
         let ptMouv = playerOne.getMouvMax();
+        if (ptMouv === 0) return;
+
         if (key === "z") {
             mouvTop(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
             ptMouv--;
-            playerOne.setMouvMax(ptMouv)
+            playerOne.setMouvMax(ptMouv);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playerOne.getMouvMax();
+            
+        
+            // console.log(playerOne.setMouvMax())
+
         };
         if (key === "d") {
             mouvRight(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
             ptMouv--;
-            playerOne.setMouvMax(ptMouv)
+            playerOne.setMouvMax(ptMouv);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playerOne.getMouvMax();
+
+            // console.log(playerOne.setMouvMax())
+
         };
         if (key === "q") {
             mouvLeft(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
             ptMouv--;
-            playerOne.setMouvMax(ptMouv)
+            playerOne.setMouvMax(ptMouv);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playerOne.getMouvMax();
+
+            // console.log(playerOne.setMouvMax())
+
         };
         if (key === "s") {
             mouvDown(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
             ptMouv--;
-            playerOne.setMouvMax(ptMouv)
+            playerOne.setMouvMax(ptMouv);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playerOne.getMouvMax();
+
+            // console.log(playerOne.setMouvMax())
+
         }
+        console.log(playerOne.getMouvMax())
     })
 
 
@@ -135,7 +182,7 @@ const main = () => {
 
     genPosition(playerOne, playertwo);
     genPosition(playertwo, playerOne);
-   
+
     genteleport(telePortA);
     genteleport(telePortB);
 
@@ -146,6 +193,7 @@ const main = () => {
     genWeapon(boot.getName(), boot);
 
     console.log(playerOne)
+    console.log(playerOne.getMouvMax())
     console.log(playertwo)
     console.log(telePortA)
     console.log(telePortB)
@@ -153,6 +201,7 @@ const main = () => {
     console.log(chopped)
     console.log(shield)
     console.log(boot)
+    // console.log(checker(35,caseType));
 
 
 
@@ -160,8 +209,8 @@ const main = () => {
 
 
 
-//     console.log(checker(35, caseType));
-//     console.dir(caseType[47]);
+        // console.log(checker(35, caseType));
+        // console.dir(caseType[47]);
 
 
 

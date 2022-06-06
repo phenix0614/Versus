@@ -5,9 +5,12 @@ class WeaPons {
         this.setDurability(durability);
         this.setWeight(weight);
         this.setDef(def);
-        this.setSpeed(speed)
-        this.setPosition(0)
+        this.setSpeed(speed);
+        this.setPosition(0);
+        // this.setImage(img)
     };
+
+
     setName(name){
         this.name=name;
     };
@@ -50,6 +53,13 @@ class WeaPons {
     getPosition(){
         return this.position
     };
+    setImage(img){
+        this.img=img;
+    };
+    getImage(){
+        return this.img;
+    };
+
 
   
 

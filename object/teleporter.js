@@ -31,7 +31,7 @@ class TelePort{
     //     return this.ExitDir
     // };
     // setReverDir(r){
-    //     this.ReverDir=r
+    //     this.ReverDir=r rf
     // };
     // getReverDir(){
     //     return this.ReverDir

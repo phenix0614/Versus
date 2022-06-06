@@ -15,7 +15,6 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     };
     const newPosition = getNewPosition(initialPosi);
     const newCase = caseType[newPosition];
-    console.log(newCase)
     if (newCase.classList.length === 0 || newCase.classList.contains(telePortA.getName()) || newCase.classList.contains(telePortB.getName())
         || newCase.classList.contains(sword.getName()) || newCase.classList.contains(chopped.getName()) || newCase.classList.contains(shield.getName()) ||
         newCase.classList.contains(boot.getName())) {
@@ -42,8 +41,8 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         const teeeeeleeepooratiooon = caseType[newReversPosition];
 
         // if (checker(teeeeeleeepooratiooon,caseType)=== true){
-            holdCase.classList.remove(j1.getName());
-            teeeeeleeepooratiooon.classList.add(j1.getName());
+        //     holdCase.classList.remove(j1.getName());
+        //     teeeeeleeepooratiooon.classList.add(j1.getName());
         // }
         j1.setPosition(newReversPosition);
     }
