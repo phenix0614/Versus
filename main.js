@@ -13,6 +13,7 @@ const main = () => {
 
     // ****************************************  VARIABLE ET FONCTION VRAC ******************************************************************************
     const caseType = document.querySelectorAll('td');
+    console.log(caseType);
 
     const ranDom = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -172,7 +173,6 @@ const main = () => {
             // console.log(playerOne.setMouvMax())
 
         }
-        console.log(playerOne.getMouvMax())
     })
 
 
@@ -216,8 +216,4 @@ const main = () => {
 
 }
 addEventListener('load', main)
-
-
-
-
 

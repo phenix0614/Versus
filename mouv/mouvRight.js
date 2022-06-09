@@ -1,4 +1,7 @@
+import retrieveImg from "../functionBox/retrieveImg.js";
+
 const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
+/************************************************  mouvement de base  droite ***************************************************************     */
     const caseType = document.querySelectorAll('td');
 
     const initialPosi = j1.getPosition();
@@ -26,14 +29,59 @@ const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         newCase.classList.add(j1.getName());
         j1.setPosition(newPosition);
     }
-    if (j1.getPosition() === sword.getPosition() || j1.getPosition() === chopped.getPosition() || j1.getPosition() === boot.getPosition()
-        || j1.getPosition() === shield.getPosition()) {
+    // ******************************************************** Option Weapon *******************************************************
+    if (j1.getPosition() === sword.getPosition()) {
+        const swordImg= "./style/images/sword.jpg";
+
+        const j1newValue = j1.getMouvMax() + sword.getSpeed();
+        j1.setMouvMax(j1newValue);
         newCase.classList.remove(sword.getName());
-        newCase.classList.remove(chopped.getName());
-        newCase.classList.remove(shield.getName());
-        newCase.classList.remove(boot.getName());
+        retrieveImg(swordImg,"#arm1");
 
     }
+
+    if (j1.getPosition() === chopped.getPosition()){
+        const choppedImg= "./style/images/hache4.jpg";
+
+        const j1newValue = j1.getMouvMax() + chopped.getSpeed();
+        j1.setMouvMax(j1newValue);
+        newCase.classList.remove(chopped.getName());
+        retrieveImg(choppedImg,"#arm1");
+        chopped.setPosition(NULL);
+
+
+    }
+
+    if(j1.getPosition() === boot.getPosition()){
+        const bootImg= "./style/images/botte.png";
+
+        const j1newValue = j1.getMouvMax() + boot.getSpeed();
+        j1.setMouvMax(j1newValue);
+        newCase.classList.remove(boot.getName());
+        retrieveImg(bootImg,"#arm2");
+
+    };
+
+
+    if(j1.getPosition() === shield.getPosition()){
+        const shieldtImg= "./style/images/bouclier.jpg";
+
+        const j1newValue = j1.getMouvMax() + shield.getSpeed();
+        j1.setMouvMax(j1newValue);
+        newCase.classList.remove(shield.getName());
+        retrieveImg(shieldtImg,"#arm2");
+
+    };
+
+    // if (j1.getPosition() === sword.getPosition() || j1.getPosition() === chopped.getPosition() || j1.getPosition() === boot.getPosition()
+    //     || j1.getPosition() === shield.getPosition()) {
+    //     newCase.classList.remove(sword.getName());
+    //     newCase.classList.remove(chopped.getName());
+    //     newCase.classList.remove(shield.getName());
+    //     newCase.classList.remove(boot.getName());
+
+    // }
+// ************************************************************ Option Telporteur **********************************************************
 
     if (j1.getPosition() === telePortA.getPosition()) {
 

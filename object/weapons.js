@@ -1,4 +1,5 @@
 class WeaPons {
+
     constructor(name,attack,durability,weight,def,speed){
         this.setName(name);
         this.setAttack(attack);

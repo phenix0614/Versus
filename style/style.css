@@ -6,15 +6,17 @@
   height: 300px;
   width: 250px;
   border: 1px solid black;
-  margin-left: 40px;
+  margin-left: 50px;
   margin-top: 5px;
-  object-fit: contain;
 }
 
 #anim > span > img {
   width: 250px;
   height: 300px;
   object-fit: cover;
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
 }
 
 #point {
@@ -48,6 +50,15 @@
   font-size: 15px;
   color: black;
 }
+#arm1  > img , #arm2 > img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: cover;
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+}
+
 
 #button {
   display: flex;
@@ -116,7 +127,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid orange;
-  background-image: url("./images/hache 4.jpg");
+  background-image: url("./images/hache4.jpg");
   background-size: 100% 100%;
 }
 
