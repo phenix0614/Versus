@@ -1,4 +1,6 @@
 import retrieveImg from "../functionBox/retrieveImg.js";
+import checker from "../functionBox/Checker.js";
+
 
 const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
 /************************************************  mouvement de base  droite ***************************************************************     */
@@ -47,7 +49,6 @@ const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         j1.setMouvMax(j1newValue);
         newCase.classList.remove(chopped.getName());
         retrieveImg(choppedImg,"#arm1");
-        chopped.setPosition(NULL);
 
 
     }
@@ -90,13 +91,13 @@ const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         const newReversPosition = iniReverPosition + 1;
         const teeeeeleeepooratiooon = caseType[newReversPosition];
 
-        // if (checker(teeeeeleeepooratiooon, caseType) === true) {
+        if (checker(teeeeeleeepooratiooon) === true) {
             holdCase.classList.remove(j1.getName());
             teeeeeleeepooratiooon.classList.add(j1.getName());
             j1.setPosition(newReversPosition);
 
         };
-    // }
+    }
 
     if (j1.getPosition() === telePortB.getPosition()) {
 
@@ -104,12 +105,16 @@ const mouvRight = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         const iniReverPosition = telePortA.getPosition();
         const newReversPosition = iniReverPosition + 1;
         const teeeeeleeepooratiooon = caseType[newReversPosition];
+        console.log(checker(teeeeeleeepooratiooon));
 
-        // if (checker(teeeeeleeepooratiooon, caseType) === true) {
+        if (checker(teeeeeleeepooratiooon) === true) {
             holdCase.classList.remove(j1.getName());
             teeeeeleeepooratiooon.classList.add(j1.getName());
-        // }
-        j1.setPosition(newReversPosition);
+            j1.setPosition(newReversPosition);
+
+        }else{
+            teeeeeleeepooratiooon = holdCase;
+        }
     }
 
 

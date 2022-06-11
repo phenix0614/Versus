@@ -1,13 +1,16 @@
 import retrieveImg from "../functionBox/retrieveImg.js";
+import checker from "../functionBox/Checker.js";
 
 const mouvTop = (j1, telePortA, telePortB, sword, chopped, shield, boot,) => {
 // ******************************************************* Mouvement Haut de base **********************************************************
 
     const caseType = document.querySelectorAll('td');
-
     const initialPosi = j1.getPosition();
+
     const newPosition = initialPosi - 10 >= 0 ? initialPosi - 10 : initialPosi;
+
     const newCase = caseType[newPosition];
+    
     if (newCase.classList.length === 0 || newCase.classList.contains(telePortA.getName()) || newCase.classList.contains(telePortB.getName())
         || newCase.classList.contains(sword.getName()) || newCase.classList.contains(chopped.getName()) || newCase.classList.contains(shield.getName()) ||
         newCase.classList.contains(boot.getName())) {

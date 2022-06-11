@@ -1,4 +1,6 @@
 import retrieveImg from "../functionBox/retrieveImg.js";
+import checker from "../functionBox/Checker.js";
+
 
 
 const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
@@ -48,7 +50,6 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         j1.setMouvMax(j1newValue);
         newCase.classList.remove(chopped.getName());
         retrieveImg(choppedImg,"#arm1");
-        chopped.setPosition(NULL);
 
 
     }
@@ -92,8 +93,8 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         const teeeeeleeepooratiooon = caseType[newReversPosition];
 
         // if (checker(teeeeeleeepooratiooon,caseType)=== true){
-        //     holdCase.classList.remove(j1.getName());
-        //     teeeeeleeepooratiooon.classList.add(j1.getName());
+            holdCase.classList.remove(j1.getName());
+            teeeeeleeepooratiooon.classList.add(j1.getName());
         // }
         j1.setPosition(newReversPosition);
     }

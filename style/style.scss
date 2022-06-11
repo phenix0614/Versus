@@ -37,9 +37,6 @@
     background-color: red;
     border: 1px solid black;
 }
-#pm{
-    background-color: green;
-}
 
 #armo{
     display: flex;
@@ -54,8 +51,21 @@
     border: 1px solid black;
     font-size: 15px;
     color: black;
-
+    // display: flex;
+    // align-content: flex-start;
+    // align-items: center;
+    // justify-content: flex-end;
 }
+
+
+#arm1 > img, #arm2 > img{
+    max-height: 50px;
+    max-width: 50px;
+    object-fit: cover;
+    
+    
+    }
+    
 #button{
     display: flex;
     justify-content: space-around;
@@ -68,12 +78,25 @@
     justify-content: center;
 }
 #pm{
+    background-color: green;
+
     font-size: 25px;
     align-items: center;
     display: flex;
     justify-content: center;
 
 }
+
+#pa{
+    background-color: red ;
+
+    font-size: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
 
 
 
@@ -98,7 +121,9 @@ tbody {
     background-color: rgb(65, 65, 213);
     border: 1px solid black;
     color: white;
-    // background-image: url("./images/mur.jpg");
+    // background-image: url("./images/brickOrange.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 
@@ -138,7 +163,7 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid orange;
-    background-image: url("./images/hache\ 4.jpg");
+    background-image: url("./images/hache4.jpg");
     // background-position: bottom;
     // background-repeat: no-repeat;
     background-size: 100% 100%;

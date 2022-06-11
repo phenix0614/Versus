@@ -7,26 +7,16 @@ import mouvRight from './mouv/mouvRight.js';
 import mouvLeft from './mouv/mouvLeft.js';
 import mouvDown from './mouv/mouvDown.js';
 import TelePort from './object/teleporter.js';
+import checker from './functionBox/Checker.js';
 
 
 const main = () => {
 
     // ****************************************  VARIABLE ET FONCTION VRAC ******************************************************************************
-    const caseType = document.querySelectorAll('td');
-    console.log(caseType);
 
     const ranDom = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
-    // const checker = (Idnbr, map) => {
-    //     const check = map[Idnbr];
-    //     if (check.classList.length === 0) {
-    //         return true
-    //     } else {
-    //         return false
-    //     }
-
-    // }
     // *********************************************************  timer   ***************************************************************
     const timerWatch= document.querySelector('#chrono');
     let timer= 60;
@@ -82,8 +72,8 @@ const main = () => {
 
     // ******************************************  JOUEUR + position *********************************************
 
-    const playerOne = new Player("player1", 200, 99, 4, 5);
-    const playertwo = new Player("player2", 200, 3, 4, 5);
+    const playerOne = new Player("player1",200, 20, 99, 4, 5);
+    const playertwo = new Player("player2",200, 10, 50, 4, 5);
 
     const genPosition = (p1, p2) => {
         const caseType = document.querySelectorAll('td');
@@ -100,16 +90,18 @@ const main = () => {
     }
     const mp= document.querySelector('#pm');        
     mp.innerText= playerOne.getMouvMax();
+     const pa = document.querySelector("#pa");
+     pa.innerText=playerOne.getPaMax();
 
 
 
 
     //************************************* ARMES *******************************************************************************
 
-    const sword = new WeaPons("sword", 10, 50, 0, 0, 3);
-    const chopped = new WeaPons("chopped", 15, 50, 2, 1, 3);
-    const shield = new WeaPons("shield", 1, 2, 3, 4, 5);
-    const boot = new WeaPons("boot", 1, 2, 3, 4, 5)
+    const sword = new WeaPons("sword", 10, 50, 0, 0, 1);
+    const chopped = new WeaPons("chopped", 15, 50, 2, 1, -1);
+    const shield = new WeaPons("shield", 1, 2, 3, 4,-1);
+    const boot = new WeaPons("boot", 1, 2, 3, 4, 50)
 
     const genWeapon = (name, weapons) => {
 
@@ -130,10 +122,14 @@ const main = () => {
     document.body.addEventListener("keyup", (event) => {
         const key = event.key;
         let ptMouv = playerOne.getMouvMax();
-        if (ptMouv === 0) return;
+        let mouvPt= playertwo.getMouvMax();
+        if (ptMouv === 0 || mouvPt === 0) return;
+
+
 
         if (key === "z") {
             mouvTop(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
+            ptMouv = playerOne.getMouvMax();
             ptMouv--;
             playerOne.setMouvMax(ptMouv);
             const mp= document.querySelector('#pm');        
@@ -143,9 +139,27 @@ const main = () => {
             // console.log(playerOne.setMouvMax())
 
         };
+
+        if (key === "ArrowUp") {
+            mouvTop(playertwo, telePortA, telePortB, sword, chopped, shield, boot);
+            mouvPt = playertwo.getMouvMax();
+            mouvPt--;
+
+            playertwo.setMouvMax(mouvPt);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playertwo.getMouvMax();
+            
+        
+            // console.log(playerOne.setMouvMax())
+
+        };
+ 
+
         if (key === "d") {
             mouvRight(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
+            ptMouv = playerOne.getMouvMax();
             ptMouv--;
+
             playerOne.setMouvMax(ptMouv);
             const mp= document.querySelector('#pm');        
             mp.innerText= playerOne.getMouvMax();
@@ -153,8 +167,27 @@ const main = () => {
             // console.log(playerOne.setMouvMax())
 
         };
+
+        if (key === "ArrowRight") {
+            mouvRight(playertwo, telePortA, telePortB, sword, chopped, shield, boot);
+            mouvPt = playertwo.getMouvMax();
+            mouvPt--;
+
+            playertwo.setMouvMax(mouvPt);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playertwo.getMouvMax();
+            
+        
+            // console.log(playerOne.setMouvMax())
+
+        };
+ 
+
+
+         
         if (key === "q") {
             mouvLeft(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
+            ptMouv = playerOne.getMouvMax();
             ptMouv--;
             playerOne.setMouvMax(ptMouv);
             const mp= document.querySelector('#pm');        
@@ -163,8 +196,27 @@ const main = () => {
             // console.log(playerOne.setMouvMax())
 
         };
+
+        if (key === "ArrowLeft") {
+            mouvLeft(playertwo, telePortA, telePortB, sword, chopped, shield, boot);
+            mouvPt = playertwo.getMouvMax();
+            mouvPt--;
+
+            playertwo.setMouvMax(mouvPt);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playertwo.getMouvMax();
+            
+        
+            // console.log(playerOne.setMouvMax())
+
+        };
+ 
+
+
+
         if (key === "s") {
             mouvDown(playerOne, telePortA, telePortB, sword, chopped, shield, boot);
+            ptMouv = playerOne.getMouvMax();
             ptMouv--;
             playerOne.setMouvMax(ptMouv);
             const mp= document.querySelector('#pm');        
@@ -173,6 +225,21 @@ const main = () => {
             // console.log(playerOne.setMouvMax())
 
         }
+
+        if (key === "ArrowDown") {
+            mouvDown(playertwo, telePortA, telePortB, sword, chopped, shield, boot);
+            mouvPt = playertwo.getMouvMax();
+            mouvPt--;
+            playertwo.setMouvMax(mouvPt);
+            const mp= document.querySelector('#pm');        
+            mp.innerText= playertwo.getMouvMax();
+            
+        
+            // console.log(playerOne.setMouvMax())
+
+        };
+ 
+
     })
 
 
@@ -201,7 +268,11 @@ const main = () => {
     console.log(chopped)
     console.log(shield)
     console.log(boot)
-    // console.log(checker(35,caseType));
+    console.log(checker(44));
+    console.log(checker(80));
+    console.log(checker(55));
+    console.log(checker(12));
+    console.log(checker(5));
 
 
 
@@ -209,7 +280,8 @@ const main = () => {
 
 
 
-        // console.log(checker(35, caseType));
+
+        console.log(checker(55));
         // console.dir(caseType[47]);
 
 

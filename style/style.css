@@ -14,9 +14,6 @@
   width: 250px;
   height: 300px;
   object-fit: cover;
-  display: flex;
-  flex-direction:row;
-  justify-content:center;
 }
 
 #point {
@@ -30,10 +27,6 @@
   height: 50px;
   background-color: red;
   border: 1px solid black;
-}
-
-#pm {
-  background-color: green;
 }
 
 #armo {
@@ -50,15 +43,12 @@
   font-size: 15px;
   color: black;
 }
-#arm1  > img , #arm2 > img {
-  max-width: 60px;
-  max-height: 60px;
-  object-fit: cover;
-  display: flex;
-  flex-direction:row;
-  justify-content:center;
-}
 
+#arm1 > img, #arm2 > img {
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: cover;
+}
 
 #button {
   display: flex;
@@ -73,6 +63,15 @@
 }
 
 #pm {
+  background-color: green;
+  font-size: 25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#pa {
+  background-color: red;
   font-size: 25px;
   align-items: center;
   display: flex;
@@ -95,6 +94,8 @@ tbody td {
   background-color: #4141d5;
   border: 1px solid black;
   color: white;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 .desactive {

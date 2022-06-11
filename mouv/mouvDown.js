@@ -1,4 +1,6 @@
 import retrieveImg from "../functionBox/retrieveImg.js";
+import checker from "../functionBox/Checker.js";
+
 
 const mouvDown = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     // ******************************************************* mouvemnt base bas *********************************************************
