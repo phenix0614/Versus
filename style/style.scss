@@ -1,10 +1,19 @@
-// body{
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: row-reverse;
-//     flex-wrap: wrap;
-//     justify-content: flex-end;   
+// ************************************************************** style de a page ******************************************************
+
+// #main {
+//     background-image: url(./images/head/logo.jpg);
+//     // background-repeat: no-repeat;
 // }
+// #home p,  h1 {
+//     color: white;
+// }
+
+// *************************************************************** style footer  *******************************************************
+ footer{
+    background-color: grey;
+ }
+
+// ************************************************************** style du jeu *********************************************************
 #container {
     display: flex;
 
@@ -14,10 +23,8 @@
     height: 300px;
     width: 250px;
     border: 1px solid black;
-    // background-image:url("./images/link.jpg") ;
     margin-left: 50px;
     margin-top: 5px;
-    // object-fit: contain;
 }
 
 #anim>span>img {
@@ -51,10 +58,6 @@
     border: 1px solid black;
     font-size: 15px;
     color: black;
-    // display: flex;
-    // align-content: flex-start;
-    // align-items: center;
-    // justify-content: flex-end;
 }
 
 
@@ -105,7 +108,7 @@ tbody {
         height: 50px;
         width: 65px;
         border: 1px solid #000000;
-        background-image: url("./images/solGris.jpg");
+        background-image: url("./images/corp/solGris.jpg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -121,7 +124,6 @@ tbody {
     background-color: rgb(65, 65, 213);
     border: 1px solid black;
     color: white;
-    // background-image: url("./images/brickOrange.jpg");
     background-repeat: no-repeat;
     object-fit: cover;
 }
@@ -130,10 +132,8 @@ tbody {
 .desactive {
     height: 50px;
     width: 65px;
-    // border: 1px solid #000000;
-    background-image: url("./images/mur.jpg");
+    background-image: url("./images/corp/mur.jpg");
     background-position: bottom;
-//     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
@@ -143,9 +143,8 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid blue;
-    background-image: url("./images/link.jpg");
+    background-image: url("./images/corp/link.jpg");
     background-position: bottom;
-    // background-repeat: no-repeat;
     background-size: 90% 90%;
 }
 
@@ -153,9 +152,8 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid red;
-    background-image: url("./images/ff6.jpg");
+    background-image: url("./images/corp/ff6.jpg");
     background-position: bottom;
-    // background-repeat: no-repeat;
     background-size: 90% 90%;
 }
 
@@ -163,9 +161,7 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid orange;
-    background-image: url("./images/hache4.jpg");
-    // background-position: bottom;
-    // background-repeat: no-repeat;
+    background-image: url("./images/corp/hache4.jpg");
     background-size: 100% 100%;
 }
 
@@ -173,9 +169,7 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid green;
-    background-image: url("./images/sword.jpg");
-    // // background-position: bottom;
-    // background-repeat: no-repeat;
+    background-image: url("./images/corp/sword.jpg");
     background-size: 100% 100%;
 }
 
@@ -183,8 +177,7 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid red;
-    background-image: url("./images/botte.png");
-    // background-repeat: no-repeat;
+    background-image: url("./images/corp/botte.png");
     background-size: 100% 100%;
 }
 
@@ -192,9 +185,7 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid red;
-    background-image: url("./images/bouclier.jpg");
-    // background-position: bottom;
-    // background-repeat: no-repeat;
+    background-image: url("./images/corp/bouclier.jpg");
     background-size: 100% 100%;
 }
 
@@ -202,9 +193,7 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid rgb(232, 6, 232);
-    background-image: url("./images/tourbillon.jpg");
-    // background-position: bottom;
-    // background-repeat: no-repeat;
+    background-image: url("./images/corp/tourbillon.jpg");
     background-size: 100% 100%;
 }
 
@@ -212,8 +201,6 @@ tbody {
     height: 50px;
     width: 65px;
     border: 1px solid rgb(232, 6, 232);
-    background-image: url("./images/tourbillon2.jpg");
-    // background-position: bottom;
-    // background-repeat: no-repeat;
+    background-image: url("./images/corp/tourbillon2.jpg");
     background-size: 100% 100%;
 }

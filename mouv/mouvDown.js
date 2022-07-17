@@ -21,7 +21,7 @@ const mouvDown = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     }
 // ******************************************************* Option Weapon ************************************************************
 if (j1.getPosition() === sword.getPosition()) {
-    const swordImg= "./style/images/sword.jpg";
+    const swordImg= "../corp/style/images/corp/sword.jpg";
 
     const j1newValue = j1.getMouvMax() + sword.getSpeed();
     j1.setMouvMax(j1newValue);
@@ -31,19 +31,19 @@ if (j1.getPosition() === sword.getPosition()) {
 }
 
 if (j1.getPosition() === chopped.getPosition()){
-    const choppedImg= "./style/images/hache4.jpg";
+    const choppedImg= "../corp/style/images/corp/hache4.jpg";
 
     const j1newValue = j1.getMouvMax() + chopped.getSpeed();
     j1.setMouvMax(j1newValue);
     newCase.classList.remove(chopped.getName());
     retrieveImg(choppedImg,"#arm1");
-    chopped.setPosition(NULL);
+    // chopped.setPosition(NULL);
 
 
 }
 
 if(j1.getPosition() === boot.getPosition()){
-    const bootImg= "./style/images/botte.png";
+    const bootImg= "../corp/style/images/corp/botte.png";
 
     const j1newValue = j1.getMouvMax() + boot.getSpeed();
     j1.setMouvMax(j1newValue);
@@ -54,7 +54,7 @@ if(j1.getPosition() === boot.getPosition()){
 
 
 if(j1.getPosition() === shield.getPosition()){
-    const shieldtImg= "./style/images/bouclier.jpg";
+    const shieldtImg= "../corp/style/images/corp/bouclier.jpg";
 
     const j1newValue = j1.getMouvMax() + shield.getSpeed();
     j1.setMouvMax(j1newValue);
@@ -81,11 +81,12 @@ if(j1.getPosition() === shield.getPosition()){
         const newReversPosition = iniReverPosition + 10;
         const teeeeeleeepooratiooon = caseType[newReversPosition];
 
-        // if (checker(teeeeeleeepooratiooon,caseType)=== true){
+        // if (checker(teeeeeleeepooratiooon)=== true){
         holdCase.classList.remove(j1.getName());
         teeeeeleeepooratiooon.classList.add(j1.getName());
-        // }
         j1.setPosition(newReversPosition);
+
+        // }
     }
 
     if (j1.getPosition() === telePortB.getPosition()) {
@@ -99,8 +100,9 @@ if(j1.getPosition() === shield.getPosition()){
         // if(checker(teeeeeleeepooratiooon,caseType)=== true){
         holdCase.classList.remove(j1.getName());
         teeeeeleeepooratiooon.classList.add(j1.getName());
-        // };
         j1.setPosition(newReversPosition);
+
+        // };
     }
 
 
