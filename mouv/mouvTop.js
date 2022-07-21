@@ -26,7 +26,7 @@ const mouvTop = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     if (j1.getPosition() === sword.getPosition()) {
         const holdCase = caseType[initialPosi];
 
-        const swordImg= "../corp/style/images/corp/sword.jpg";
+        const swordImg= "./style/images/corp/sword.jpg";
 
         const j1newValue = j1.getMouvMax() + sword.getSpeed();
         j1.setMouvMax(j1newValue);
@@ -42,7 +42,7 @@ const mouvTop = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     }
 
     if (j1.getPosition() === chopped.getPosition()){
-        const choppedImg= "../corp/style/images/corp/hache4.jpg";
+        const choppedImg= "./style/images/corp/hache4.jpg";
 
         const j1newValue = j1.getMouvMax() + chopped.getSpeed();
         j1.setMouvMax(j1newValue);
@@ -54,7 +54,7 @@ const mouvTop = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
     }
 
     if(j1.getPosition() === boot.getPosition()){
-        const bootImg= "../corp/style/images/corp/botte.png";
+        const bootImg= "./style/images/corp/botte.png";
 
         const j1newValue = j1.getMouvMax() + boot.getSpeed();
         j1.setMouvMax(j1newValue);
@@ -65,7 +65,7 @@ const mouvTop = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
 
 
     if(j1.getPosition() === shield.getPosition()){
-        const shieldtImg= "../corp/style/images/corp/bouclier.jpg";
+        const shieldtImg= "./style/images/corp/bouclier.jpg";
 
         const j1newValue = j1.getMouvMax() + shield.getSpeed();
         j1.setMouvMax(j1newValue);
