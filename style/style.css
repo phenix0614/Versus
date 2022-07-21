@@ -86,7 +86,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid #000000;
-  background-image: url("./images/corp/solGris.jpg");
+  background-image: url("./images/solGris.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -105,7 +105,7 @@ tbody td {
 .desactive {
   height: 50px;
   width: 65px;
-  background-image: url("./images/corp/mur.jpg");
+  background-image: url("../style/images/mur.jpg");
   background-position: bottom;
   background-size: 100% 100%;
 }
