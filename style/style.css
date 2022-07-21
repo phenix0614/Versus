@@ -114,7 +114,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid blue;
-  background-image: url("./images/link.jpg");
+  background-image: url("../images/link.jpg");
   background-position: bottom;
   background-size: 90% 90%;
 }
@@ -123,7 +123,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid red;
-  background-image: url("./images/ff6.jpg");
+  background-image: url("../images/ff6.jpg");
   background-position: bottom;
   background-size: 90% 90%;
 }
@@ -132,7 +132,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid orange;
-  background-image: url("./images/hache4.jpg");
+  background-image: url("../images/hache4.jpg");
   background-size: 100% 100%;
 }
 
@@ -140,7 +140,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid green;
-  background-image: url("./images/sword.jpg");
+  background-image: url("../images/sword.jpg");
   background-size: 100% 100%;
 }
 
@@ -148,7 +148,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid red;
-  background-image: url("./images/botte.png");
+  background-image: url("../images/botte.png");
   background-size: 100% 100%;
 }
 
@@ -164,7 +164,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid #e806e8;
-  background-image: url("./images/tourbillon.jpg");
+  background-image: url("../images/tourbillon.jpg");
   background-size: 100% 100%;
 }
 
@@ -172,7 +172,7 @@ tbody td {
   height: 50px;
   width: 65px;
   border: 1px solid #e806e8;
-  background-image: url("./images/tourbillon2.jpg");
+  background-image: url("../images/tourbillon2.jpg");
   background-size: 100% 100%;
 }
 
