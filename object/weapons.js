@@ -8,9 +8,7 @@ class WeaPons {
         this.setDef(def);
         this.setSpeed(speed);
         this.setPosition(0);
-        // this.setImage(img)
     };
-
 
     setName(name){
         this.name=name;
@@ -60,12 +58,7 @@ class WeaPons {
     getImage(){
         return this.img;
     };
-
-
-  
-
-   
 };
 
-export default WeaPons
+export default WeaPons;
 

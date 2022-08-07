@@ -17,7 +17,7 @@ footer {
 #anim > span > img {
   width: 250px;
   height: 300px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 #point {

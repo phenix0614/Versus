@@ -6,5 +6,4 @@ const retrieveImg = (way, name) => {
     block.appendChild(img);
 
 }
-
 export default retrieveImg;

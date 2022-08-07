@@ -1,6 +1,6 @@
 
-
 const creatTable = (tableLenght) => {
+
     const tBody = document.getElementById("tableBody");
 
     for (let i = 0; i < tableLenght; i++) {

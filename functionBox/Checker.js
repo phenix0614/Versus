@@ -8,6 +8,5 @@ const checker = (Idnbr) => {
     } else {
         return false
     }
-
 }
- export default checker;
+export default checker;

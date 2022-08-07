@@ -74,14 +74,6 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         retrieveImg(shieldtImg,"#arm2");
 
     };
-    // if (j1.getPosition() === sword.getPosition() || j1.getPosition() === chopped.getPosition() || j1.getPosition() === boot.getPosition()
-    //     || j1.getPosition() === shield.getPosition()) {
-    //     newCase.classList.remove(sword.getName());
-    //     newCase.classList.remove(chopped.getName());
-    //     newCase.classList.remove(shield.getName());
-    //     newCase.classList.remove(boot.getName());
-
-    // }
     // *****************************************************Option Teleporteur *******************************************************
 
 
@@ -92,10 +84,8 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         const newReversPosition = iniReverPosition - 1;
         const teeeeeleeepooratiooon = caseType[newReversPosition];
 
-        // if (checker(teeeeeleeepooratiooon,caseType)=== true){
             holdCase.classList.remove(j1.getName());
             teeeeeleeepooratiooon.classList.add(j1.getName());
-        // }
         j1.setPosition(newReversPosition);
     }
 
@@ -106,13 +96,9 @@ const mouvLeft = (j1, telePortA, telePortB, sword, chopped, shield, boot) => {
         const newReversPosition = iniReverPosition - 1;
         const teeeeeleeepooratiooon = caseType[newReversPosition];
 
-        // if (checker(teeeeeleeepooratiooon,caseType)=== true){
             holdCase.classList.remove(j1.getName());
             teeeeeleeepooratiooon.classList.add(j1.getName());
-        // }
         j1.setPosition(newReversPosition);
     }
-
-
 };
 export default mouvLeft 

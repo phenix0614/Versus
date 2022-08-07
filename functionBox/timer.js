@@ -1,13 +1,12 @@
-const timerWatch= document.querySelector('#chrono');
-let timer= 60;
+const timerWatch = document.querySelector('#chrono');
+let timer = 60;
 
-const timelaps = () =>
-{
+const timelaps = () => {
 
     timerWatch.innerText = timer;
-    timer --;
+    timer--;
     if (timer >= 0) {
         setTimeout(timelaps, 1000);
     }
-} 
- export default timelaps
+}
+export default timelaps

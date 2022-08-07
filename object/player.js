@@ -1,7 +1,7 @@
 
 
 class Player {
-    constructor(name, hp,pa, mouv, atak, armor, A,B) {
+    constructor(name, hp, pa, mouv, atak, armor, A, B) {
         this.setName(name);
         this.setHp(hp);
         this.setPaMax(pa)
@@ -16,10 +16,10 @@ class Player {
     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ les set & get $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     // ********* name ****************
     setName(name) {
-        this.name = name
+        this.name = name;
     }
     getName() {
-        return this.name
+        return this.name;
     }
     // ************* position ********************
     // *************** hp *********************************
@@ -27,14 +27,14 @@ class Player {
         this.hp = hp;
     }
     getHp() {
-        return this.hp
+        return this.hp;
     }
     // ************* Pa ****************
-    setPaMax(pa){
+    setPaMax(pa) {
         this.pa = pa
     }
-    getPaMax(){
-        return this.pa
+    getPaMax() {
+        return this.pa;
     }
     // ***********mouv**************
     setMouvMax(mouv) {
@@ -48,39 +48,33 @@ class Player {
         this.atak = atak;
     }
     getAtak() {
-        return this.atak
+        return this.atak;
     }
     // ************ armor *****************
     setArmor(armor) {
-        this.armor = armor
+        this.armor = armor;
     }
     getArmor() {
-        return this.armor
+        return this.armor;
     }
     setPosition(p) {
-        this.position = p
+        this.position = p;
     }
     getPosition() {
-        return this.position
+        return this.position;
     }
     setWeaponA(A) {
-        this.weaponA = A
+        this.weaponA = A;
     }
     getWeaponA() {
-        return this.weaponA
+        return this.weaponA;
     }
 
     setWeaponB(B) {
-        this.weaponB = B
+        this.weaponB = B;
     };
     getWeaponB() {
-        return this.weaponB
+        return this.weaponB;
     };
-
-
-
-
 }
-
-
-export default Player
+export default Player;

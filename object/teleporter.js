@@ -38,4 +38,4 @@ class TelePort{
     // };
 
 }
-export default TelePort
+export default TelePort;

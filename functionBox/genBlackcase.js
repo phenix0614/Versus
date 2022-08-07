@@ -8,8 +8,6 @@ const genBlackCase = (nbrWall) => {
 
         const randomT = ranDom(0, 99);
         caseType[randomT].classList.add("desactive");
-
     }
-
 }
  export default genBlackCase
